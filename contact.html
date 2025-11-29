@@ -8,19 +8,20 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!--EmailJS SDK-->
-  <script type="text/javascript"
-  src = "https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" >
-</script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <!--code from EmailJS to send form info to right account-->
   <script type="text/javascript">
-    (function(){
+    (function () {
       emailjs.init({
-      publickey:"QZhO9rd6vIkW94ST-",
+        publickey: "QZhO9rd6vIkW94ST-",
       });
     });
   </script>
 
-   <script src="script.js"></script>
+  <script src="script.js"></script>
 </head>
+<!--Valid/Invalid Feedback makes sure form gets filled out properly-->
 
 <body class="bg-light p-4">
 
@@ -32,7 +33,7 @@
       <form id="contactForm" class="was-validated">
         <div class="mb-3">
           <label class="form-label">Your Name</label>
-          <input type="text" id="name"class="form-control" required>
+          <input type="text" id="name" class="form-control" required>
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback"> Thank You!</div>
         </div>
@@ -49,7 +50,7 @@
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback"> Thank You!</div>
         </div>
-
+        <!--Flower Count Dropdown Menu-->
         <div class="mb-3">
           <label class="form-label">Flower Count</label>
           <select id="FlowerCount" class="form-select" required>
@@ -69,7 +70,7 @@
           </select>
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback"> Thank You!</div>
-
+          <!--Flower Color Dropdown Menu-->
         </div>
         <div class="mb-3">
           <label class="form-label">Flower Color</label>
@@ -93,14 +94,14 @@
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback">Thank You!</div>
         </div>
-
+        <!--Special Requests Text Box-->
         <div class="mb-3">
           <label class="form-label">Special Requests</label>
           <textarea id="message" class="form-control" rows="3" required></textarea>
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback"> Thank You!</div>
         </div>
-
+        <!--Optional Section to insert inspo image-->
         <div class="mb-3">
           <label class="form-label">Upload an Image (optional)</label>
           <input type="file" id="imageUpload" class="form-control" accept="image/*">
@@ -118,7 +119,7 @@
   </div>
 
   <script>
-  //Preview uploaded image
+    //Preview uploaded image
     const imageInput = document.getElementById('imageUpload');
     const preview = document.getElementById('preview');
 
