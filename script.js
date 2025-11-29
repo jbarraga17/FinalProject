@@ -1,5 +1,6 @@
-function sendMail(){
-    let parms = {
+
+function sendMail() {
+    const params = {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         PhoneNum: document.getElementById('PhoneNum').value,
@@ -9,11 +10,13 @@ function sendMail(){
         image_base64: document.getElementById('preview').src || ""
       };
 
-emailjs.send("service_irv34dn", "template_8qz76u6", parms)
+    emailjs.sendForm("service_irv34dn", "template_8qz76u6", params)
     .then(() => {
+        console.log("SUCCESS", response);
         alert("Email has been Sent!");
     })
     .catch((error) => {
-    alert("Something went wrong when sending your message.");
+        console.error("FAILED", error)
+        alert("Something went wrong when sending your message.");
     });
 }
