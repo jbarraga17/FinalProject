@@ -6,8 +6,14 @@ function sendMail(){
         FlowerCount: document.getElementById('FlowerCount').value,
         FlowerColor: document.getElementById('FlowerColor').value,
         message: document.getElementById('message').value,
-        image_base64: document.getElementId('preview').src || ""
-      }
+        image_base64: document.getElementById('preview').src || ""
+      };
 
-emailjs.send("service_irv34dn", "template_8qz76u6", parms).then(alert("Email has been Sent!"))
+emailjs.send("service_irv34dn", "template_8qz76u6", parms)
+    .then(() => {
+        alert("Email has been Sent!");
+    })
+    .catch((error) => {
+    alert("Something went wrong when sending your message.");
+    });
 }
