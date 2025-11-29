@@ -24,6 +24,15 @@
 
 <body class="bg-light p-4">
 
+    <!-- Navbar gets injected here -->
+    <div id="nav-placeholder"></div>
+
+    <script>
+        $("#nav-placeholder").load("navbar.html");
+    </script>
+    <!-- Bootstrap JS must go last -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
   <div class="container">
     <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
       <h3 class="text-center mb-3">Nicky's BFF Contact Form!</h3>
