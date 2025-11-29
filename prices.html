@@ -11,22 +11,33 @@
 
     <!-- jQuery (needed for .load()) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<style>
+    <!--Style Section to make specific background and text color without having to repeat-->
+    <!-- .card-img-top makes all the images in the cards the same so the cards look similar-->
+
+    <style>
         .bg-websitetheme {
             background-color: #ffc5d3;
 
         }
-        :root{
-            --bs-maroon:#800000;
+
+        :root {
+            --bs-maroon: #800000;
         }
-        .text-maroon{
-            color:var(--bs-maroon)
+
+        .text-maroon {
+            color: var(--bs-maroon)
+        }
+
+        .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
         }
     </style>
 </head>
 
 <body class="bg-websitetheme">
-     <!-- Navbar gets injected here -->
+    <!-- Navbar gets injected here -->
     <div id="nav-placeholder"></div>
 
     <script>
@@ -35,85 +46,260 @@
     <!-- Bootstrap JS must go last -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<!--Header Section-->
-<div class="container py-5">
-    <h1 class="text-center mb-3 text-maroon">Prices</h1>
+    <!--Header Section-->
+    <div class="container py-5">
+        <h1 class="text-center mb-3 text-maroon">Prices</h1>
 
-    <p class="text-center fs-5 text-dark">
-        <strong>Payment Options:</strong> Zelle | Apple Pay | Cash<br>
-        To begin crafting your floral arrangement, a <strong>30% deposit</strong> is required. This helps us secure
-        the necessary materials and ensures that we dedicate the proper time and care to create your perfect bouquet.
-        The deposit also allows us to prioritize your order and provide the best service possible, ensuring the
-        highest quality in every arrangement.<br><br>
-       </p>
-</dv>
+        <p class="text-center fs-5 text-dark">
+            <strong>Payment Options:</strong> Zelle | Apple Pay | Cash<br>
+            To begin crafting your floral arrangement, a <strong>30% deposit</strong> is required. This helps us secure
+            the necessary materials and ensures that we dedicate the proper time and care to create your perfect
+            bouquet.
+            The deposit also allows us to prioritize your order and provide the best service possible, ensuring the
+            highest quality in every arrangement.<br><br>
+        </p>
+        </dv>
 
-<div class="container py-5 text-maroon">
-    <h2 class="text-center mb-3 text-maroon">List of Prices</h2>
-</div>
-<!--Dropdown Section with Prices depending on Flower-->
-<div class="row justify-content-center">
-
-<!--Roses Dropdown-->
-    <div class="col-md-4 mb-3">
-        <div class="dropdown">
-            <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Roses Prices
-            </button>
-            <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item">7 Roses | $21</a></li>
-                <li><a class="dropdown-item">10 Roses | $30</a></li>
-                <li><a class="dropdown-item">15 Roses | $45</a></li>
-                <li><a class="dropdown-item">18 Roses | $54</a></li>
-                <li><a class="dropdown-item">20 Roses | $60</a></li>
-                <li><a class="dropdown-item">30 Roses | $90</a></li>
-                <li><a class="dropdown-item">40 Roses | $120</a></li>
-                <li><a class="dropdown-item">50 Roses | $165</a></li>
-                <li><a class="dropdown-item">60 Roses | $198</a></li>
-                <li><a class="dropdown-item">80 Roses | $265</a></li>
-                <li><a class="dropdown-item">100 Roses | $330</a></li>
-                <li><a class="dropdown-item">Other | Contact Florist</a></li>
-            </ul>
+        <div class="container py-5 text-maroon">
+            <h2 class="text-center mb-3 text-maroon">List of Prices</h2>
         </div>
-    </div>
+        <!--Dropdown Section with Prices depending on Flower-->
+        <div class="row justify-content-center">
 
-    <!--Plumeria Dropdown-->
-    <div class="col-md-4 mb-3">
-        <div class="dropdown">
-            <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Plumeria Prices
-            </button>
-            <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item">7 Plumerias | $21</a></li>
-                <li><a class="dropdown-item">10 Plumerias | $30</a></li>
-                <li><a class="dropdown-item">15 Plumerias | $60</a></li>
-                <li><a class="dropdown-item">18 Plumerias | $72</a></li>
-                <li><a class="dropdown-item">20 Plumerias | $80</a></li>
-                <li><a class="dropdown-item">30 Plumerias | $120</a></li>
-                <li><a class="dropdown-item">40 Plumerias | $160</a></li>
-                <li><a class="dropdown-item">Other | Contact Florist</a></li>
-            </ul>
+            <!--Roses Dropdown-->
+            <div class="col-md-4 mb-3">
+                <div class="dropdown">
+                    <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Roses Prices
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                        <li><a class="dropdown-item">7 Roses | $21</a></li>
+                        <li><a class="dropdown-item">10 Roses | $30</a></li>
+                        <li><a class="dropdown-item">15 Roses | $45</a></li>
+                        <li><a class="dropdown-item">18 Roses | $54</a></li>
+                        <li><a class="dropdown-item">20 Roses | $60</a></li>
+                        <li><a class="dropdown-item">30 Roses | $90</a></li>
+                        <li><a class="dropdown-item">40 Roses | $120</a></li>
+                        <li><a class="dropdown-item">50 Roses | $165</a></li>
+                        <li><a class="dropdown-item">60 Roses | $198</a></li>
+                        <li><a class="dropdown-item">80 Roses | $265</a></li>
+                        <li><a class="dropdown-item">100 Roses | $330</a></li>
+                        <li><a class="dropdown-item">Other | Contact Florist</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Plumeria Dropdown-->
+            <div class="col-md-4 mb-3">
+                <div class="dropdown">
+                    <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Plumeria Prices </button>
+                    <ul class="dropdown-menu w-100">
+                        <li><a class="dropdown-item">7 Plumerias | $21</a></li>
+                        <li><a class="dropdown-item">10 Plumerias | $30</a></li>
+                        <li><a class="dropdown-item">15 Plumerias | $60</a></li>
+                        <li><a class="dropdown-item">18 Plumerias | $72</a></li>
+                        <li><a class="dropdown-item">20 Plumerias | $80</a></li>
+                        <li><a class="dropdown-item">30 Plumerias | $120</a></li>
+                        <li><a class="dropdown-item">40 Plumerias | $160</a></li>
+                        <li><a class="dropdown-item">Other | Contact Florist</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Sunflower Dropdown-->
+            <div class="col-md-4 mb-3">
+                <div class="dropdown">
+                    <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        Sunflower Prices
+                    </button>
+                    <ul class="dropdown-menu w-100">
+                        <li><a class="dropdown-item">3 Sunflowers | $15</a></li>
+                        <li><a class="dropdown-item">7 Sunflowers | $35</a></li>
+                        <li><a class="dropdown-item">18 Sunflowers | $90</a></li>
+                        <li><a class="dropdown-item">Other | Contact Florist</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!--Sunflower Dropdown-->
-    <div class="col-md-4 mb-3">
-        <div class="dropdown">
-            <button class="btn btn-danger w-100 dropdown-toggle" type="button" data-bs-toggle="dropdown">
-                Sunflower Prices
-            </button>
-            <ul class="dropdown-menu w-100">
-                <li><a class="dropdown-item">3 Sunflowers | $15</a></li>
-                <li><a class="dropdown-item">7 Sunflowers | $35</a></li>
-                <li><a class="dropdown-item">18 Sunflowers | $90</a></li>
-                <li><a class="dropdown-item">Other | Contact Florist</a></li>
-            </ul>
+        <!--Add-Ons section with cards of Add On options and Prices-->
+        <div class="container py-5 text-maroon">
+            <br><br><br><br><br><br>
+            <h2 class="text-center mb-3 text-maroon">Add-Ons</h2>
         </div>
-    </div>
-</div>
+        <div class="container pb-5">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
 
+                <!--Custom Cards for different Add ons (Banner, Big crown, small crown, chocolates, stickers)-->
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/Princess.jpg" class="card-img-top" alt="Banner">
+                        <div class="card-body">
+                            <h5 class="card-title text-maroon">Custom Banner</h5>
+                            <p>Banner of any color with your desired text!</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/Chocolates.png" class="card-img-top" alt="Chocolates">
+                        <div class="card-body">
+                            <h5 class="card-title text-maroon">Chocolates</h5>
+                            <p>Ferrero Rocher chocolates for the chocolate lovers!</p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/crown.png" class="card-img-top" alt="Big Crown">
+                        <div class="card-body">
+                            <h5 class="card-title text-maroon">Big Crown</h5>
+                            <p>Beautiful large crown for your special someone!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/littlecrown.png" class="card-img-top" alt="Little Crown">
+                        <div class="card-body">
+                            <h5 class="card-title text-maroon">Little Crowns</h5>
+                            <p>Cute mini crowns that add a charming touch to any bouquet!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100 text-center">
+                        <img src="images/Stickers.png" class="card-img-top" alt="Stickers">
+                        <div class="card-body">
+                            <h5 class="card-title text-maroon">Stickers</h5>
+                            <p>Custom stickers to enhance your bouquet with extra color and personality.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container py-5 text-maroon">
+                <h2 class="text-center mb-3 text-maroon">Plushie Options</h2>
+            </div>
+            <!--Section for Plushie options-->
+            <div class="container pb-5">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                    <!--Custom Cards for different plushie options-->
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/plushkitty.png" class="card-img-top" alt="Hello Kitty Plushie">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Hello Kitty</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/kuromi.png" class="card-img-top" alt="Kuromi">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Kuromi</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/pooh.png" class="card-img-top" alt="Winnie Pooh">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Winnie Pooh</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/stitch.png" class="card-img-top" alt="Stitch ">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Stitch</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/pinkstitch.png" class="card-img-top" alt="Angel">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Angel</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/spiderman.png" class="card-img-top" alt="Spider-Man">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Spider-Man</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/cowblk.png" class="card-img-top" alt="Black Cow">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Hello Kitty</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/kuromi.png" class="card-img-top" alt="Kuromi">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Kuromi</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/pooh.png" class="card-img-top" alt="Winnie Pooh">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Winnie Pooh</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/stitch.png" class="card-img-top" alt="Stitch ">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Stitch</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/pinkstitch.png" class="card-img-top" alt="Angel">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Angel</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center">
+                            <img src="images/spiderman.png" class="card-img-top" alt="Spider-Man">
+                            <div class="card-body">
+                                <h5 class="card-title text-maroon">Spider-Man</h5>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
 
 
 
