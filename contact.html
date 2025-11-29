@@ -23,21 +23,21 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Your Email</label>
-          <input type="email" id="email" class="form-control" required>
+          <input type="email" id="email" class="form-control" email="email" required>
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback"> Thank You!</div>
         </div>
 
         <div class="mb-3">
           <label class="form-label">Phone Number</label>
-          <input type="text" id="PhoneNum" class="form-control" required>
+          <input type="text" id="PhoneNum" class="form-control" PhoneNum="PhoneNum" required>
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback"> Thank You!</div>
         </div>
 
         <div class="mb-3">
           <label class="form-label">Flower Count</label>
-          <select class="form-select">
+          <select id="FlowerCount" class="form-select" FlowerCount="FlowerCount" required>
             <option>7</option>
             <option>10</option>
             <option>15</option>
@@ -57,7 +57,7 @@
         </div>
         <div class="mb-3">
           <label class="form-label">Flower Color</label>
-          <select class="form-select">
+          <select id="FlowerColor" class="form-select" FlowerColor="FlowerColor" required>
             <option>Red</option>
             <option>Orange</option>
             <option>Yelllow</option>
@@ -76,12 +76,12 @@
           <div class="invalid-feedback"> Please Fill Out.</div>
           <div class="valid-feeback">Thank You!</div>
         </div>
-        
+
         <div class="mb-3">
-        <label class="form-label">Special Requests</label>
-        <textarea id="message" class="form-control" rows="3" required></textarea>
-        <div class="invalid-feedback"> Please Fill Out.</div>
-        <div class="valid-feeback"> Thank You!</div>
+          <label class="form-label">Special Requests</label>
+          <textarea id="message" class="form-control" rows="3" required></textarea>
+          <div class="invalid-feedback"> Please Fill Out.</div>
+          <div class="valid-feeback"> Thank You!</div>
         </div>
 
         <div class="mb-3">
@@ -100,6 +100,11 @@
     </div>
   </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs.com@3/dis/email.min.js"></script>
+  <script>
+    emailjs.init("raOEMgnhAR4BB_zq_");
+  </script>
 
   <script>
     // Preview uploaded image
@@ -121,15 +126,28 @@
     // Handle form submission
     document.getElementById('contactForm').addEventListener('submit', function (event) {
       event.preventDefault();
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
+      //Collects inputs of name,email, phone numer, flowercount, flowercolor, and special requests
+      const params = {
+        name: document.getElementById('name').value,
+        cemail: document.getElementById('email').value,
+        PhoneNum: document.getElementByID('PhoneNum').value,
+        FlowerCount: document.getElementByID('FlowerCount').value,
+        FlowerColor: document.getElementByID('FlowerColor').value,
+        message: document.getElementById('message').value,
+        image_base64: preview.src || ""
+      };
 
-      const mailtoLink = `mailto:business@email.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message + "\n\nFrom: " + email)}`;
-      window.location.href = mailtoLink;
+      emailjs.send("customerRequests", "template_zqjdn5n", params)
+        .then(() => {
+          alert("Your message has been sent successfully!");
+          preview.styple.display = "none";
+        })
+        .catch((error) => {
+          alert("error sending message")
+        });
     });
   </script>
-  vbg
+
 </body>
 
 </html>
