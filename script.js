@@ -10,7 +10,7 @@ function sendMail() {
         image_base64: document.getElementById('preview').src || ""
       };
 
-    emailjs.sendForm("service_irv34dn", "template_8qz76u6", params)
+    emailjs.send("service_irv34dn", "template_8qz76u6", params)
     .then(() => {
         console.log("SUCCESS", response);
         alert("Email has been Sent!");
